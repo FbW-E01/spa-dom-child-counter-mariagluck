@@ -33,7 +33,7 @@ Array.from(wrapperList.children).map((child) => console.log(child.classList.leng
 
 function childWithMostClasses() {
     let mostclasses = 0;
-    let mostclassesChild = 0;
+    let mostclassesChild = "";
     for (let child of wrapperList.children) {
         if (child.classList.length > mostclasses) {
             mostclasses = child.classList.length;
@@ -42,16 +42,11 @@ function childWithMostClasses() {
 
     }
     return {
-        "MostClasseselement": mostclassesChild,
-        Length: mostclasses,
+        "child with most classes": mostclassesChild,
+        "number of classes": mostclasses,
     };
 }
 
 console.log(childWithMostClasses());
 
-//{"MostClasseselement": {
-//         banner.style1.orient-left.content-align-left.image-position-right.fullscreen.onload-image-f…
-//         }
-//     },
-//     "Length": 9
-// };
+//{Child with most classes: section.banner.style1.orient-left.content-align-left.image-position-right.fullscreen.onload-image-f…, number of classes: 9}
